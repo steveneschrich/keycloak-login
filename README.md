@@ -14,6 +14,7 @@ This plugin first tries to do the login against `keycloak`, if the user i not on
  ```
  Python3 -m pip install .
  ```
+ 
 # Running
 
 The most convenient way to develop on `Keyckloak-login` is to use the devops scripts from the [Digital Slide Archive](https://github.com/DigitalSlideArchive/digital_slide_archive/tree/master/devops).
