@@ -1,0 +1,38 @@
+.g-config-breadcrumb-container
+p.
+  Below is the Keycloak configuration for connecting to the server
+
+.g-keycloak-server-list-title Keycloak Config
+form.g-keycloak-server-form(role="form")
+  .panel-group.g-keycloak-server-accordion
+    div
+      .form-group
+        label.control-label(for=`g-keycloak-server-host`) Host
+        input.input-sm.form-control.g-host-input(id=`g-keycloak-server-host`,
+            name="host", placeholder="Host", value=config.host)
+      .form-group
+        label.control-label(for=`g-keycloak-server-client`) Client
+        input.input-sm.form-control(id=`g-keycloak-server-client`,
+            name="client", placeholder="Client", value=config.client)
+      .form-group
+        label.control-label(for=`g-keycloak-server-realm`) Realm
+        input.input-sm.form-control(id=`g-keycloak-server-realm`,
+            name="realm", placeholder="Realm", value=config.realm)
+      .form-group
+        label.control-label(for=`g-keycloak-server-secret-key`) Secret Key
+        input.input-sm.form-control(id=`g-keycloak-server-secret-key`,
+            name="secret-key", placeholder="Secret Key", value=config.secret)
+      .form-group
+        button.g-keycloak-test.btn.btn-sm.btn-default(type="button") Test connection
+        .g-keycloak-test-result.hide(id=`g-keycloak-server-conn-ok`, status="success")
+          i.icon-ok
+          | Connection OK
+        .g-keycloak-test-result.hide(id=`g-keycloak-server-conn-fail`, status="failure")
+          i.icon-cancel
+          span.g-msg
+    p.g-validation-failed-message
+
+  .btn-toolbar
+    input.btn.btn-sm.btn-primary(type="submit", value="Save")
+
+p.g-validation-failed-message
